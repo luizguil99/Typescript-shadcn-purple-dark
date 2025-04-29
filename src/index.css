@@ -90,9 +90,9 @@
   }
 }
 
-/* Adiciona a classe dark ao html por padrão - usando JavaScript */
+
 @layer base {
-  /* Esta parte será executada quando o CSS for carregado */
+  
   html:not(.light) {
     color-scheme: dark;
   }
@@ -154,5 +154,18 @@
   
   .animation-delay-600 {
     animation-delay: 600ms;
+  }
+
+  @keyframes text-shimmer {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .animate-text-shimmer {
+    animation: text-shimmer 2s linear infinite;
   }
 }
